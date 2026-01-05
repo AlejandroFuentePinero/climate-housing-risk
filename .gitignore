@@ -1,63 +1,77 @@
-# =========================
-# OS / editor
-# =========================
+# ======================================================
+# OS / Editor
+# ======================================================
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 
-# =========================
-# Python cache / build
-# =========================
+# ======================================================
+# Python: cache, build, tooling
+# ======================================================
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
 *.so
+
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.ipynb_checkpoints/
 .coverage
 htmlcov/
-dist/
+
 build/
+dist/
 *.egg-info/
 
-# =========================
-# Environments / secrets
-# =========================
+# ======================================================
+# Virtual environments / local secrets
+# ======================================================
 .venv/
 venv/
 env/
+
 .env
 .env.*
 *.pem
 *.key
 
-# =========================
+# ======================================================
+# Notebooks
+# ======================================================
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# ======================================================
 # Logs / temp
-# =========================
+# ======================================================
 *.log
 *.tmp
 tmp/
 temp/
 
-# =========================
+# ======================================================
 # Data: keep repo small
-# =========================
+# Track only placeholders (e.g., .gitkeep) so folders exist.
+# ======================================================
 data/raw/**
 !data/raw/
 !data/raw/.gitkeep
 
-# Optional: ignore interim data too (uncomment if needed)
+# Optional (uncomment if you start downloading other large datasets)
+# data/external/**
+# !data/external/
+# !data/external/.gitkeep
+#
 # data/interim/**
 # !data/interim/
 # !data/interim/.gitkeep
 
-# =========================
-# Large scientific formats (safety net)
-# =========================
+# ======================================================
+# Large scientific / geospatial formats (safety net)
+# Prevent accidental commits of huge binaries anywhere in repo.
+# If you later want to track some of these in processed outputs,
+# remove or narrow this block.
+# ======================================================
 *.nc
 *.nc4
 *.grib
@@ -67,3 +81,30 @@ data/raw/**
 *.hdf5
 *.tif
 *.tiff
+
+# Common compressed archives (often huge)
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+
+# ======================================================
+# Project outputs / artifacts (reproducible)
+# ======================================================
+outputs/
+artifacts/
+reports/_build/
+reports/figures/tmp/
+
+# Columnar data outputs (often large)
+*.parquet
+*.feather
+
+# Local databases / caches
+*.sqlite
+*.duckdb
+
+# Local-only config overrides
+config/local.*
