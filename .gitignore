@@ -1,0 +1,69 @@
+# =========================
+# OS / editor
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =========================
+# Python cache / build
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# =========================
+# Environments / secrets
+# =========================
+.venv/
+venv/
+env/
+.env
+.env.*
+*.pem
+*.key
+
+# =========================
+# Logs / temp
+# =========================
+*.log
+*.tmp
+tmp/
+temp/
+
+# =========================
+# Data: keep repo small
+# =========================
+data/raw/**
+!data/raw/
+!data/raw/.gitkeep
+
+# Optional: ignore interim data too (uncomment if needed)
+# data/interim/**
+# !data/interim/
+# !data/interim/.gitkeep
+
+# =========================
+# Large scientific formats (safety net)
+# =========================
+*.nc
+*.nc4
+*.grib
+*.grb
+*.zarr
+*.h5
+*.hdf5
+*.tif
+*.tiff
